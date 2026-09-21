@@ -34,7 +34,6 @@ body {
 
 .header {
     display: flex;
-    background-color: rgb(177, 196, 255);
     width: 900px;
     height: 150px;
     align-items: center;
@@ -44,11 +43,14 @@ body {
     margin: 0 auto;
     border: #282729 4px solid;
     border-radius: 7px;
+    background-color: rgba(141, 142, 207, 0.5);
+    backdrop-filter: blur(5px);
 }
 
 .main {
     padding: 4px;
-    background-color: rgb(141, 207, 185);
+    background-color: rgba(141, 207, 185, 0.5);
+    backdrop-filter: blur(5px);
     margin: 0 auto;
     align-self: center;
     align-content: center;
@@ -60,4 +62,42 @@ body {
 
 h3 {
     color: gray;
+}
+
+a {
+    background: linear-gradient(to bottom,
+        #c8ffc5 0%,
+        #1fbf24 55%,
+        #009a05 55%,
+        #457a28 100%
+    );
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 30px;
+    color: white;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    float: left;
+}
+
+a::before {
+    background: linear-gradient(to bottom,
+        rgb(255, 255, 255) 0%,
+        rgba(255, 255, 255, 0.5) 100%
+    );
+    border-radius: 20px;
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 90%;
+    top: 0px;
+    opacity: 0.3;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+p.cool {
+    font-size: small;
+    line-height: 13px;
 }
