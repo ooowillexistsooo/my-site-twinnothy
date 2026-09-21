@@ -1,0 +1,63 @@
+body {
+    --color-1: #d3a2e9;
+    --color-2: #ffffff;
+    --square-size: 100px;
+    
+    background-image: conic-gradient(
+        var(--color-1) 0% 25%, 
+        var(--color-2) 25% 50%, 
+        var(--color-1) 50% 75%, 
+        var(--color-2) 75% 100%
+    );
+    
+    background-size: var(--square-size) var(--square-size);
+    
+    animation: moveBackground 3s linear infinite;
+
+    font-family: "Gamja Flower", sans-serif;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: var(--square-size) var(--square-size);
+    }
+}
+
+.site-stats {
+    width: 50px;
+    height: 25px;
+}
+
+.header {
+    display: flex;
+    background-color: rgb(177, 196, 255);
+    width: 900px;
+    height: 150px;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: #282729 4px solid;
+    border-radius: 7px;
+}
+
+.main {
+    padding: 4px;
+    background-color: rgb(141, 207, 185);
+    margin: 0 auto;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    width: 900px;
+    border: #282729 4px solid;
+    border-radius: 7px;
+}
+
+h3 {
+    color: gray;
+}
